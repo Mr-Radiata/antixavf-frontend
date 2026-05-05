@@ -439,7 +439,7 @@ export default function App() {
               <span className='text-slate-400 font-medium'>Verified by Google API</span>
             </div>
             <p>© 2026 Antixavf Security.</p>
-            <p>Ishlab chiquvchi: <span className="text-slate-400 font-medium">Merlin</span></p>
+            <p>Ishlab chiquvchi: <span className="text-slate-400 font-medium">ZeroGate team</span></p>
             <div className="flex items-center justify-center gap-4 mt-2 pt-2 border-t border-slate-800">
                 <a href="/privacy-policy" className="text-blue-400/80 hover:text-blue-300 transition-colors">Maxfiylik Siyosati</a>
             </div>

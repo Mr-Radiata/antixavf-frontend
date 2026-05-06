@@ -12,5 +12,74 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
+  <!-- Buni <body> tagining eng tepasiga joylang -->
+<style>
+  /* Saytni skroll qilishni va orqa fonga bosishni butunlay bloklaymiz */
+  body {
+    overflow: hidden !important;
+    pointer-events: none !important; 
+  }
+  
+  /* Va faqat modal uchun bosishga ruxsat beramiz */
+  #maintenance-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.95); /* To'q ko'k rangli xira fon */
+    backdrop-filter: blur(10px); /* Orqa fonni loyqalashtirish */
+    z-index: 99999999; /* Hamma narsaning eng ustiga chiqishi uchun */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto !important; /* Modal o'zi bosilishi mumkin */
+  }
+
+  .maintenance-box {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid #334155;
+    max-width: 90%;
+    width: 450px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .maintenance-icon {
+    width: 80px;
+    height: 80px;
+    color: #f59e0b; /* Sariq ogohlantirish rangi */
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+</style>
+
+<div id="maintenance-overlay">
+  <div class="maintenance-box">
+    <!-- Ogohlantirish ikonchasi -->
+    <svg class="maintenance-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+    </svg>
+    
+    <h2 style="color: #ffffff; margin-top: 0; font-size: 26px; font-weight: bold;">
+      Tizimda tuzatish ishlari!
+    </h2>
+    
+    <p style="color: #94a3b8; line-height: 1.6; font-size: 16px; margin-top: 15px;">
+      Hozirgi vaqtda Antixavf dasturining aniqligini 100% ga yetkazish maqsadida muhim xavfsizlik va yangilanish ishlari olib borilmoqda.
+      <br><br>
+      Keltirilgan noqulayliklar uchun uzr so'raymiz. Iltimos, birozdan so'ng qayta tashrif buyuring.
+    </p>
+  </div>
+</div>
 
 </html>
